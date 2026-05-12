@@ -59,6 +59,7 @@ go
 # System tools
 htop
 btop
+socat
 acpid
 rfkill
 gnome-keyring
