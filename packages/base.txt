@@ -1,0 +1,75 @@
+# System
+base-devel
+git
+linux-headers
+
+# Hyprland stack
+hyprland
+hyprlock
+hypridle
+hyprpaper
+waybar
+dunst
+kitty
+rofi-wayland
+polkit-gnome
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+gtk-layer-shell
+python-gobject
+
+# Audio
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
+pamixer
+
+# Screenshot / display
+grim
+slurp
+wl-clipboard
+brightnessctl
+wev
+
+# Fonts
+ttf-jetbrains-mono-nerd
+noto-fonts
+noto-fonts-emoji
+ttf-font-awesome
+
+# Apps
+thunar
+telegram-desktop
+vlc
+libreoffice-fresh
+evince
+freecad
+firefox
+blueman
+bluez
+bluez-utils
+
+
+# Dev
+docker
+docker-compose
+go
+
+# System tools
+htop
+btop
+acpid
+rfkill
+gnome-keyring
+libsecret
+cups
+avahi
+fprintd
+
+# Performance
+thermald
+irqbalance
+zram-generator
+earlyoom
+ccache
