@@ -1,17 +1,21 @@
 {
 	"layer": "top",
 	"position": "top",
-	"height": 34,
-	"spacing": 4,
+	"height": 43,
 
-	"modules-left": ["hyprland/workspaces", "hyprland/window"],
-	"modules-center": ["clock"],
+	"modules-left": [
+		"custom/arch",
+		"custom/memory",
+		"custom/cpu",
+		"custom/temperature",
+		"custom/disk",
+	],
+	"modules-center": ["custom/power-mode", "hyprland/window"],
 	"modules-right": [
+		"clock",
+		"hyprland/workspaces",
 		"hyprland/language",
-		"memory",
-		"temperature",
 		"pulseaudio",
-		"bluetooth",
 		"network",
 		"battery",
 		"custom/swaync",
@@ -33,23 +37,47 @@
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 	},
 
-	"cpu": {
-		"format": " {usage}%",
-		"interval": 2,
-		"on-click": "kitty -e btop",
-	},
-
-	"memory": {
-		"format": " {}%",
+	"custom/memory": {
+		"exec": "~/.local/bin/waybar-memory.sh",
 		"interval": 5,
+		"signal": 8,
+		"return-type": "json",
 		"on-click": "kitty -e btop",
+		"on-click-right": "~/.local/bin/waybar-stats-toggle.sh",
 	},
 
-	"temperature": {
-		"hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
-		"critical-threshold": 85,
-		"format": " {temperatureC}°C",
-		"format-critical": " {temperatureC}°C",
+	"custom/cpu": {
+		"exec": "~/.local/bin/waybar-cpu.sh",
+		"interval": 2,
+		"signal": 8,
+		"return-type": "json",
+		"on-click": "kitty -e btop",
+		"on-click-right": "~/.local/bin/waybar-stats-toggle.sh",
+	},
+
+	"custom/temperature": {
+		"exec": "~/.local/bin/waybar-temp.sh",
+		"interval": 5,
+		"signal": 8,
+		"return-type": "json",
+		"on-click-right": "~/.local/bin/waybar-stats-toggle.sh",
+	},
+
+	"custom/disk": {
+		"exec": "~/.local/bin/waybar-disk.sh",
+		"interval": 30,
+		"signal": 8,
+		"return-type": "json",
+		"on-click-right": "~/.local/bin/waybar-stats-toggle.sh",
+	},
+
+	"custom/power-mode": {
+		"exec": "~/.local/bin/waybar-power.sh",
+		"interval": 5,
+		"signal": 12,
+		"return-type": "json",
+		"on-click": "~/.local/bin/power-cycle.sh",
+		"tooltip": true,
 	},
 
 	"battery": {
@@ -98,6 +126,12 @@
 		"format": " {}",
 		"format-en": "EN",
 		"format-ru": "RU",
+	},
+
+	"custom/arch": {
+		"format": "",
+		"on-click": "rofi -show drun",
+		"tooltip": false,
 	},
 
 	"custom/swaync": {
