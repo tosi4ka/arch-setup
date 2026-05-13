@@ -17,9 +17,18 @@ window#waybar {
 	padding: 0 4px;
 }
 
+/* Media player */
+#mpris {
+	background: rgba(20, 20, 28, 0.92);
+	border-radius: 20px;
+	color: #ccc;
+	padding: 4px 16px;
+	margin: 5px 4px;
+}
+
 /* Arch icon */
 #custom-arch {
-	background: rgba(127, 119, 221, 0.25);
+	background: rgba(20, 20, 28, 0.92);
 	border-radius: 50%;
 	color: #ffffff;
 	font-size: 16px;
@@ -31,7 +40,7 @@ window#waybar {
 }
 
 #custom-arch:hover {
-	background: rgba(127, 119, 221, 0.45);
+	background: rgba(40, 40, 55, 0.95);
 }
 
 /* Pill 1: memory (left) + cpu (right) */
@@ -161,4 +170,28 @@ window#waybar {
 }
 #custom-power-mode.performance {
 	color: #f09595;
+}
+
+#mpris {
+	background: rgba(20, 20, 28, 0.92);
+	border-radius: 20px;
+	color: #ccc;
+	padding: 4px 16px;
+	margin: 5px 4px;
+}
+
+#custom-swaync {
+	background: rgba(20, 20, 28, 0.92);
+	border-radius: 20px;
+	color: #ccc;
+	padding: 4px 16px;
+	margin: 5px 4px;
+}
+
+#custom-media {
+	background: rgba(20, 20, 28, 0.92);
+	border-radius: 20px;
+	color: #ccc;
+	padding: 4px 16px;
+	margin: 5px 4px;
 }

@@ -47,6 +47,7 @@ evince
 freecad
 firefox
 blueman
+imv
 bluez
 bluez-utils
 

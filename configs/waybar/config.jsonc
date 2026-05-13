@@ -10,15 +10,14 @@
 		"custom/temperature",
 		"custom/disk",
 	],
-	"modules-center": ["custom/power-mode", "hyprland/window"],
+	"modules-center": ["custom/power-mode", "custom/media", "custom/swaync"],
 	"modules-right": [
-		"clock",
 		"hyprland/workspaces",
 		"hyprland/language",
 		"pulseaudio",
 		"network",
+		"clock",
 		"battery",
-		"custom/swaync",
 		"tray",
 	],
 
@@ -132,6 +131,32 @@
 		"format": "",
 		"on-click": "rofi -show drun",
 		"tooltip": false,
+	},
+
+	// "mpris": {
+	// 	"format": "{player_icon} ⏸ {title} — {artist}",
+	// 	"format-paused": "{player_icon} ▶ {title} — {artist}",
+	// 	"player-icons": {
+	// 		"default": "󰎆",
+	// 		"spotify": "",
+	// 		"firefox": "󰈹",
+	// 		"chromium": "󰊯",
+	// 	},
+	// 	"status-icons": {
+	// 		"paused": "󰏤",
+	// 	},
+	// 	"max-length": 40,
+	// 	"tooltip": true,
+	// },
+
+	"custom/media": {
+		"exec": "~/.local/bin/waybar-media.sh",
+		"interval": 3,
+		"signal": 13,
+		"return-type": "json",
+		"max-length": 55,
+		"on-click": "playerctl play-pause",
+		"on-click-right": "~/.local/bin/waybar-media-toggle.sh",
 	},
 
 	"custom/swaync": {
