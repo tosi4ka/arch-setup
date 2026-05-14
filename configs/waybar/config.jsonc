@@ -13,8 +13,8 @@
 	"modules-center": ["custom/power-mode", "custom/media", "custom/swaync"],
 	"modules-right": [
 		"hyprland/workspaces",
+		"custom/volume",
 		"hyprland/language",
-		"pulseaudio",
 		"network",
 		"clock",
 		"battery",
@@ -93,11 +93,14 @@
 		"on-click": "kitty -e bash -c 'nmcli device wifi rescan; nmtui'",
 	},
 
-	"pulseaudio": {
-		"format": "{icon} {volume}%",
-		"format-muted": "",
-		"format-icons": { "default": ["", "", ""] },
+	"custom/volume": {
+		"exec": "~/.local/bin/waybar-volume.sh",
+		"interval": 2,
+		"signal": 9,
+		"return-type": "json",
+		"scroll-step": 5,
 		"on-click": "pavucontrol",
+		"on-click-right": "~/.local/bin/waybar-volume-toggle.sh",
 	},
 
 	"bluetooth": {
@@ -155,7 +158,7 @@
 		"signal": 13,
 		"return-type": "json",
 		"max-length": 55,
-		"on-click": "playerctl play-pause",
+		"on-click": "~/.local/bin/waybar-media-click.sh",
 		"on-click-right": "~/.local/bin/waybar-media-toggle.sh",
 	},
 

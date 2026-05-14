@@ -121,12 +121,65 @@ window#waybar {
 	min-width: 30px;
 }
 
-#pulseaudio,
-#network,
-#battery,
-#bluetooth {
-	padding: 0 10px;
+/* Right modules */
+#language {
+	background: rgba(20, 20, 28, 0.92);
+	border-radius: 20px;
+	color: #7f77dd;
+	font-weight: 600;
+	padding: 4px 12px;
+	margin: 5px 2px;
+	min-width: 30px;
+}
+
+#custom-volume {
+	background: rgba(20, 20, 28, 0.92);
+	border-radius: 20px;
 	color: #aaa;
+	padding: 4px 14px;
+	margin: 5px 2px;
+}
+
+#network,
+#bluetooth {
+	background: rgba(20, 20, 28, 0.92);
+	color: #aaa;
+	padding: 4px 12px;
+	margin: 5px 2px;
+}
+
+#network {
+	border-radius: 20px 0 0 20px;
+}
+
+#bluetooth {
+	border-radius: 0 20px 20px 0;
+	margin-left: 0;
+}
+
+#battery {
+	background: rgba(20, 20, 28, 0.92);
+	border-radius: 20px;
+	color: #aaa;
+	padding: 4px 14px;
+	margin: 5px 2px;
+}
+
+#battery.warning {
+	color: #fac775;
+}
+#battery.critical {
+	color: #f09595;
+}
+#battery.charging {
+	color: #a3e3a3;
+}
+
+#tray {
+	background: rgba(20, 20, 28, 0.92);
+	border-radius: 20px;
+	padding: 4px 10px;
+	margin: 5px 4px 5px 2px;
 }
 
 #battery.warning {
