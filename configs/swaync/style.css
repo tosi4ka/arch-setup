@@ -1,0 +1,164 @@
+* {
+  font-family: 'JetBrainsMono Nerd Font', monospace;
+  font-size: 14px;
+}
+
+:root {
+  --bg:           rgba(20, 20, 28, 0.95);
+  --bg-hover:     rgba(40, 40, 55, 0.95);
+  --bg-darker:    rgba(14, 14, 20, 0.98);
+  --border:       rgba(127, 119, 221, 0.2);
+  --accent:       #7f77dd;
+  --text:         #ccc;
+  --text-dim:     #555;
+  --critical:     #f09595;
+  --radius:       16px;
+}
+
+notificationwindow, blankwindow {
+  background: transparent;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+.floating-notifications .notification-row .notification-background .notification {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  margin: 6px;
+  padding: 0;
+}
+
+.floating-notifications .notification-row .notification-background {
+  padding: 4px 8px;
+}
+
+.notification-default-action {
+  background: transparent;
+  border: none;
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 8px;
+}
+
+.notification-default-action:hover {
+  background: var(--bg-hover);
+}
+
+.notification-content .summary {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.notification-content .time {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.notification-content .body {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.close-button {
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  border: none;
+  border-radius: 100%;
+  min-width: 22px;
+  min-height: 22px;
+  margin: 6px 6px 0 0;
+  padding: 0;
+}
+
+.close-button:hover {
+  background: rgba(240, 149, 149, 0.3);
+}
+
+.notification-row .notification-background .notification.critical {
+  border-color: var(--critical);
+}
+
+.control-center {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  padding: 4px;
+}
+
+.control-center .control-center-list {
+  background: transparent;
+}
+
+.control-center .control-center-list .notification {
+  background: rgba(30, 30, 42, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.control-center .control-center-list .notification .notification-default-action:hover,
+.control-center .control-center-list .notification .notification-action:hover {
+  background: var(--bg-hover);
+  border-radius: 12px;
+}
+
+.control-center .control-center-list-placeholder {
+  color: var(--text-dim);
+}
+
+.blank-window {
+  background: transparent;
+}
+
+.widget {
+  margin: 6px;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.widget-title > label {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.widget-title > button {
+  background: rgba(127, 119, 221, 0.15);
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2px 12px;
+}
+
+.widget-title > button:hover {
+  background: rgba(127, 119, 221, 0.3);
+}
+
+.widget-dnd label {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.widget-dnd switch {
+  background: var(--bg-darker);
+  border-radius: 20px;
+}
+
+.widget-dnd switch:checked {
+  background: var(--accent);
+}
+
+.notification-group .notification-group-buttons,
+.notification-group .notification-group-headers {
+  color: var(--text-dim);
+}
+
+.notification-group.collapsed.not-expanded {
+  opacity: 0.4;
+}

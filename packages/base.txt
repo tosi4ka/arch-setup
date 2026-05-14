@@ -9,7 +9,7 @@ hyprlock
 hypridle
 hyprpaper
 waybar
-dunst
+swaync
 kitty
 rofi-wayland
 polkit-gnome
@@ -24,13 +24,13 @@ pipewire-pulse
 pipewire-alsa
 wireplumber
 pamixer
+playerctl
 
 # Screenshot / display
 grim
 slurp
 wl-clipboard
 brightnessctl
-wev
 
 # Fonts
 ttf-jetbrains-mono-nerd

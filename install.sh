@@ -25,8 +25,7 @@ grep -v '^#' "$SCRIPT_DIR/packages/aur.txt" | grep -v '^$' | xargs yay -S --need
 
 # ── 4. hypr-utils ────────────────────────────────────────────
 echo "[4/7] Installing hypr-utils..."
-git clone git@github.com:tosi4ka/hypr-utils.git /tmp/hypr-utils
-cd /tmp/hypr-utils && ./install.sh
+git clone https://github.com/tosi4ka/hypr-utils.git /tmp/hypr-utilscd /tmp/hypr-utils && ./install.sh
 cd "$SCRIPT_DIR"
 
 # ── 5. Dotfiles ──────────────────────────────────────────────
