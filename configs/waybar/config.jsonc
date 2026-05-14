@@ -15,7 +15,8 @@
 		"hyprland/workspaces",
 		"custom/volume",
 		"hyprland/language",
-		"network",
+		"bluetooth",
+		"custom/network",
 		"clock",
 		"battery",
 		"tray",
@@ -86,11 +87,11 @@
 		"format-icons": ["", "", "", "", ""],
 	},
 
-	"network": {
-		"format-wifi": " {essid}",
-		"format-ethernet": " {ipaddr}",
-		"format-disconnected": "󰤭",
-		"on-click": "kitty -e bash -c 'nmcli device wifi rescan; nmtui'",
+	"custom/network": {
+		"exec": "~/.local/bin/waybar-network.sh",
+		"interval": 5,
+		"return-type": "json",
+		"on-click": "kitty -e bash -c 'nmcli device wifi list --rescan yes > /dev/null 2>&1; nmtui'",
 	},
 
 	"custom/volume": {
@@ -104,13 +105,13 @@
 	},
 
 	"bluetooth": {
-		"format": " {status}",
-		"format-connected": " {device_alias}",
+		"format": "󰂯",
+		"format-connected": "󰂱",
 		"format-disabled": "",
 		"on-click": "blueman-manager",
-		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"tooltip-format": "No devices connected",
+		"tooltip-format-disabled": "Bluetooth off",
+		"tooltip-format-connected": "{device_alias} ({num_connections} connected)",
 	},
 
 	"custom/power": {
@@ -125,7 +126,7 @@
 	},
 
 	"hyprland/language": {
-		"format": " {}",
+		"format": "{}",
 		"format-en": "EN",
 		"format-ru": "RU",
 	},

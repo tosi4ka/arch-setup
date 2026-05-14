@@ -113,21 +113,12 @@ window#waybar {
 	color: #ddd;
 }
 
-/* Right modules */
-#language {
-	color: #7f77dd;
-	font-weight: 600;
-	padding: 0 10px;
-	min-width: 30px;
-}
-
-/* Right modules */
 #language {
 	background: rgba(20, 20, 28, 0.92);
 	border-radius: 20px;
 	color: #7f77dd;
 	font-weight: 600;
-	padding: 4px 12px;
+	padding: 4px 10px;
 	margin: 5px 2px;
 	min-width: 30px;
 }
@@ -140,21 +131,20 @@ window#waybar {
 	margin: 5px 2px;
 }
 
-#network,
 #bluetooth {
 	background: rgba(20, 20, 28, 0.92);
-	color: #aaa;
-	padding: 4px 12px;
-	margin: 5px 2px;
-}
-
-#network {
 	border-radius: 20px 0 0 20px;
+	color: #aaa;
+	padding: 4px 12px 4px 16px;
+	margin: 5px 0 5px 2px;
 }
 
-#bluetooth {
+#custom-network {
+	background: rgba(20, 20, 28, 0.92);
 	border-radius: 0 20px 20px 0;
-	margin-left: 0;
+	color: #aaa;
+	padding: 4px 16px 4px 12px;
+	margin: 5px 2px 5px 0;
 }
 
 #battery {
