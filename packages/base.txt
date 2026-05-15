@@ -17,6 +17,8 @@ xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 gtk-layer-shell
 python-gobject
+python-google-api-python-client
+python-google-auth-oauthlib
 
 # Audio
 pipewire
