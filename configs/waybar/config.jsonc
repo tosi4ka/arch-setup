@@ -33,8 +33,9 @@
 
 	"clock": {
 		"format": " {:%H:%M}",
-		"format-alt": " {:%d.%m.%Y %H:%M}",
-		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": " {:%d.%m.%Y}",
+		"tooltip-format": "{:%A, %d %B %Y}",
+		"on-click-right": "~/.local/bin/waybar-calendar.py",
 	},
 
 	"custom/memory": {
