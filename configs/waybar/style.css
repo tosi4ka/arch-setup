@@ -228,17 +228,32 @@ window#waybar {
 }
 
 #custom-tray-toggle {
-	background: rgba(20, 20, 28, 0.92);
+	background-color: rgba(20, 20, 28, 0.92);
+	background-image: url("/home/tosi4ka/.config/waybar/icons/tray-toggle.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px 20px;
 	border-radius: 50%;
-	color: #aaa;
-	font-size: 12px;
+	color: transparent;
+	font-size: 0;
 	min-width: 34px;
 	min-height: 34px;
 	margin: 5px 0 5px 6px;
 	padding: 0;
 }
 #custom-tray-toggle:hover {
-	background: rgba(40, 40, 55, 0.95);
+	background-color: rgba(40, 40, 55, 0.95);
+	background-image: url("/home/tosi4ka/.config/waybar/icons/tray-toggle.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px 20px;
+}
+#custom-tray-toggle.open {
+	background-color: rgba(30, 28, 50, 0.95);
+	background-image: url("/home/tosi4ka/.config/waybar/icons/tray-toggle.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px 20px;
 }
 
 #tray {
