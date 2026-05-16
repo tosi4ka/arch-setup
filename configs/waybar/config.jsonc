@@ -12,14 +12,13 @@
 	],
 	"modules-center": ["custom/power-mode", "custom/media", "custom/swaync"],
 	"modules-right": [
-		"hyprland/workspaces",
 		"custom/volume",
 		"hyprland/language",
 		"bluetooth",
 		"custom/network",
 		"clock",
-		"battery",
-		"tray",
+		"custom/battery",
+		"custom/tray-toggle",
 	],
 
 	"hyprland/workspaces": {
@@ -81,11 +80,14 @@
 		"tooltip": true,
 	},
 
-	"battery": {
-		"states": { "warning": 30, "critical": 15 },
-		"format": "{icon} {capacity}%",
-		"format-charging": " {capacity}%",
-		"format-icons": ["", "", "", "", ""],
+	"custom/battery": {
+		"exec": "~/.local/bin/waybar-battery.sh",
+		"interval": 1,
+		"signal": 10,
+		"return-type": "json",
+		"on-click": "~/.local/bin/waybar-battery-toggle-percent.sh",
+		"on-click-right": "~/.local/bin/waybar-battery-toggle.sh",
+		"tooltip": true,
 	},
 
 	"custom/network": {
@@ -120,10 +122,6 @@
 		"interval": 5,
 		"on-click": "~/.local/bin/power-toggle.sh",
 		"tooltip": false,
-	},
-
-	"tray": {
-		"spacing": 8,
 	},
 
 	"hyprland/language": {
@@ -179,5 +177,13 @@
 		"on-click": "swaync-client -t -sw",
 		"on-click-right": "swaync-client -d -sw",
 		"escape": true,
+	},
+	"custom/tray-toggle": {
+		"exec": "~/.local/bin/waybar-tray-status.sh",
+		"interval": "once",
+		"signal": 11,
+		"return-type": "json",
+		"on-click": "~/.local/bin/waybar-tray-toggle.sh",
+		"tooltip": true,
 	},
 }

@@ -147,29 +147,21 @@ window#waybar {
 	margin: 5px 2px 5px 0;
 }
 
-#battery {
+#custom-battery {
 	background: rgba(20, 20, 28, 0.92);
 	border-radius: 20px;
 	color: #aaa;
 	padding: 4px 14px;
 	margin: 5px 2px;
 }
-
-#battery.warning {
+#custom-battery.warning {
 	color: #fac775;
 }
-#battery.critical {
+#custom-battery.critical {
 	color: #f09595;
 }
-#battery.charging {
+#custom-battery.charging {
 	color: #a3e3a3;
-}
-
-#tray {
-	background: rgba(20, 20, 28, 0.92);
-	border-radius: 20px;
-	padding: 4px 10px;
-	margin: 5px 4px 5px 2px;
 }
 
 #battery.warning {
@@ -190,10 +182,6 @@ window#waybar {
 
 #custom-swaync.notification {
 	color: #7f77dd;
-}
-
-#tray {
-	padding: 0 8px;
 }
 
 #custom-power-mode {
@@ -237,4 +225,25 @@ window#waybar {
 	color: #ccc;
 	padding: 4px 16px;
 	margin: 5px 4px;
+}
+
+#custom-tray-toggle {
+	background: rgba(20, 20, 28, 0.92);
+	border-radius: 50%;
+	color: #aaa;
+	font-size: 12px;
+	min-width: 34px;
+	min-height: 34px;
+	margin: 5px 0 5px 6px;
+	padding: 0;
+}
+#custom-tray-toggle:hover {
+	background: rgba(40, 40, 55, 0.95);
+}
+
+#tray {
+	min-width: 0;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
 }
