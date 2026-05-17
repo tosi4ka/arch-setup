@@ -132,7 +132,7 @@
 
 	"custom/arch": {
 		"format": "",
-		"on-click": "rofi -show drun",
+		"on-click": "~/.local/bin/app-launcher.py",
 		"tooltip": false,
 	},
 
