@@ -186,4 +186,9 @@
 		"on-click": "~/.local/bin/waybar-tray-toggle.sh",
 		"tooltip": true,
 	},
+	"custom/power-menu": {
+		"format": "󰐥",
+		"on-click": "~/.local/bin/power-menu.py",
+		"tooltip": false,
+	},
 }
